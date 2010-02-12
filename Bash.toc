@@ -1,0 +1,7 @@
+## Interface: 30300
+## Title: Bash
+## Notes: Some slash-commands
+## Author: ichik (original code by ALZA)
+## Version: 1.0
+
+Bash.lua
