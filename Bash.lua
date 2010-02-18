@@ -37,3 +37,16 @@ SlashCmdList["SETORATANK"] = function(msg)
         print("|cff00ffffaSettings|r: how to set oRA2 tanks.\n/oramt |cff00ffffindex |cff00ff00name|r - set a player with |cff00ff00name|r as tank. Index must be a number (1-10).\n/oramt |cff00ffffremove |cff00ff00name|r - remove a tank.")
     end
 end
+
+--[[ Raid Disband ]]--
+SlashCmdList["RADISBAND"] = function()
+	local pName = UnitName("player")
+	for i = 1, GetNumRaidMembers() do 
+		local name = GetRaidRosterInfo(i) 
+		if name ~= pName then 
+			UninviteUnit(name) 
+		end 
+	end 
+	LeaveParty()
+end
+SLASH_RADISBAND1 = "/radisband"
